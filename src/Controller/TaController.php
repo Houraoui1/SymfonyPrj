@@ -12,14 +12,14 @@ class TaController extends AbstractController
     public function index($np): Response
     { 
         $tableNote = [];
-
+    
         for ($i = 0; $i < $np; $i++) {
             $note = rand(0, 20);
             $tableNote[] = $note;
         }
-
+    
         return $this->render('tap/index.html.twig', [
-            'notes'=> $tableNote
+            'notes' => $tableNote
         ]);
     }
 
